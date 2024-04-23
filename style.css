@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Concert+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&family=Roboto+Slab:wght@100..900&family=Seymour+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Concert+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&family=Roboto+Slab:wght@100..900&family=Seymour+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    max-height: 100vh;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100vw;
+}
+
+body {
+    background: rgb(41, 116, 200);
+    background: linear-gradient(90deg, rgba(41, 116, 200, 1) 1%, rgba(144, 215, 255, 1) 52%, rgba(47, 195, 172, 1) 100%);
+}
+
+a {
+    list-style: none;
+    text-decoration: none;
+}
+
+p {
+    letter-spacing: 1px;
+}
+
+
+/* Стилизация header */
+header {
+    display: flex;
+    width: 100vw;
+    background: #fff;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1000;
+}
+
+/* Логотип */
+.logo-ncfu {
+    width: 100%;
+    height: 70px;
+}
+
+/* Навигационное меню */
+.ul-bar {
+    display: flex;
+    width: 650px;
+    justify-content: center;
+}
+
+/* Стилизация элементов навигационного меню */
+.inform-li {
+    font-size: 1.5rem;
+    padding: 20px;
+    font-weight: bold;
+    list-style: none;
+    color: #000000;
+}
+
+.inform-li:any-link {
+    color: #000000;
+}
+
+.inform-li:hover {
+    text-shadow: 0 0 20px blue;
+    transition: .3s;
+}
+
+/* Стилизация контактной информации */
+.ul-telephone {
+    display: block;
+    align-items: center;
+}
+
+.li-telephone {
+    color: #000000;
+    font-size: 0.75rem;
+    list-style: none;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.link-telephone:nth-child(2) {
+    display: block;
+}
+
+.link-telephone:last-child {
+    display: block;
+}
+
+.link-telephone:hover {
+    color: #001eff;
+    text-decoration: underline;
+    transition: .3s;
+}
+
+/* Стилизация ссылок на соц. сети */
+.ul-social {
+    margin-right: 40px;
+}
+
+/* Изменение размера иконом соц. сетей*/
+.svg-li img {
+    width: 25px;
+    padding: 10px;
+}
+
+.svg-li:hover img {
+    box-shadow: 0 0 10px #232C76;
+    border-radius: 10px;
+}
+
+
+/* Главная состовляющая страницы */
+main {
+    display: flex;
+    flex-direction: column;
+    padding-top: 114px;
+}
+
+/* Блок о колледже */
+.college-ncfu {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 50px;
+    padding: 20px;
+    margin: 50px;
+    margin-top: 100px;
+    align-items: center;
+}
+
+/* Изображение в блоке .college-ncfu*/
+.main-img {
+    width: 1000px;
+    border-radius: 50px;
+}
+
+.inform-college__h3 {
+    color: #232C76;
+}
+
+.main-p {
+    color: #232C76;
+    font-family: "Roboto Slab", serif;
+    font-weight: 500;
+}
+
+/* Переворачивающиеся карточки */
+.flip-cards {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    width: 80%;
+    margin: 70px auto;
+}
+
+.flip-cards__card {
+    background-color: transparent;
+    width: 350px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0);
+    perspective: 1000px;
+    margin-top: 50px;
+}
+
+.flip-cards__card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.75s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+
+.card-inner__front, .card-inner__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-inner__front {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+.card-inner__back {
+    text-align: center;
+}
+
+.card-inner__front {
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    color: black;
+    font-size: 14px;
+}
+
+.card-inner__front-header-date-publication, .card-inner__front-header-name {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.front__content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.front__text {
+    font-size: 0.9rem;
+}
+
+
+.card-inner__back {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    transform: rotateY(180deg);
+}
+
+.specialty_features__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.specialty_features__list-header, .specialty_features__list-items {
+    font-size: 0.75rem;
+}
+
+.specialty_features__list-header {
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+.card__many--items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card__many--items > .card-inner__front-header-date-publication, .card-inner__front-header-name {
+    position: relative;
+    grid-column: 1 / span 2;
+}
+
+.partner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.h-partner {
+    text-align: center;
+    font-size: 3rem;
+    color: #fff;
+    margin-top: 100px;
+}
+
+.div-partner {
+    width: 900px;
+    background: #fff;
+    border-radius: 50px;
+    padding: 20px;
+    text-align: center;
+}
+
+.img-partner {
+    width: 125px;
+    border-radius: 20px;
+}
+
+.entrance {
+    padding: 100px;
+    margin-left: 30px;
+}
+
+.entrance:last-child {
+    display: flex;
+    align-items: center;
+}
+
+.numbering-container {
+    display: grid;
+    grid-template-columns: 2fr, 1fr;
+}
+
+.h-entrance {
+    grid-column: 1;
+    color: #fff;
+    font-size: 4rem;
+}
+
+.ul-entrance {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1;
+}
+
+.li-entrance {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.li-entrance:nth-child(1) {
+    color: #001eff;
+    list-style-image: url(skins/svg-content/1.svg);
+}
+
+.li-entrance:nth-child(2) {
+    color: #51BA40;
+    list-style-image: url(skins/svg-content/2.svg);
+}
+
+.li-entrance:nth-child(3) {
+    color: #fa1991;
+    list-style-image: url(skins/svg-content/3.svg);
+
+}
+
+.li-entrance:last-child {
+    color: coral;
+    list-style-image: url(skins/svg-content/4.svg);
+}
+
+.li-entrance:hover {
+    cursor: default;
+}
+
+.li-entrance > span {
+    color: #fff;
+}
+
+.numbering-img-block {
+    width: 100%;
+    grid-column: 2;
+}
+
+.numbering-img {
+    height: 500px;
+    border-radius: 30px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #000000;
+    padding: 20px;
+    align-items: center;
+    height: 134.4px;
+}
+
+.logo-footer {
+    width: 150px;
+    z-index: 1000;
+}
+
+.p-footer {
+    font-size: 0.75rem;
+    color: #fff;
+}
+
+.svg-footer {
+    fill: #fff;
+}
+
+.link-footer {
+    color: #fff;
+}
+
+.link-footer:any-link {
+    color: #fff;
+}
+
+.li-telephone {
+    color: #000000;
+}
+
+.li-footer {
+    color: #fff;
+}
+
+.small-img-svg {
+    width: 30px;
+    height: 30px;
+}
+
+.green-text {
+    color: #739133;
+}
+
+.blue-text {
+    color: #2e8af2;
+}
+
+.red-text {
+    color: #FA1991;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
